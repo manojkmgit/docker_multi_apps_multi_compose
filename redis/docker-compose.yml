@@ -1,0 +1,12 @@
+version: "3.3"
+services:
+  redis_host:
+    image: "redis:alpine"
+    networks:
+        - mynet 
+    ports:
+      - "6380:6379"
+
+networks:
+  mynet:
+    external: true

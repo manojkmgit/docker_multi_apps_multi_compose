@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  web:
+    build: .
+    networks:
+        - mynet 
+    ports:
+      - "5000:5000"
+      - "5001:5000"
+
+networks:
+  mynet:
+    external: true
